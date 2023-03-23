@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1107,2372" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1175,2775" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
       <x:String>System.Activities</x:String>
@@ -93,7 +93,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This bot is used to get the weather in a city then suggest a specific clothing." DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="644,2307" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This bot is used to get the weather in a city then suggest a specific clothing." DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1170,2710" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CityName" />
       <Variable x:TypeArguments="x:String" Name="Temperature" />
@@ -107,7 +107,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog to Get City Name" sap:VirtualizedContainerService.HintSize="582,52" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter a city name" Title="Get the Weather">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog to Get City Name" sap:VirtualizedContainerService.HintSize="1108,52" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter a city name" Title="Get the Weather">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[CityName]</OutArgument>
       </ui:InputDialog.Result>
@@ -118,7 +118,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:LogMessage DisplayName="Log City Name" sap:VirtualizedContainerService.HintSize="582,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[CityName.ToString]">
+    <ui:LogMessage DisplayName="Log City Name" sap:VirtualizedContainerService.HintSize="1108,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[CityName.ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -126,20 +126,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Google" sap:VirtualizedContainerService.HintSize="582,1764" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Google" sap:VirtualizedContainerService.HintSize="1108,1427" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Scrape weather details" sap:VirtualizedContainerService.HintSize="548,1547" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Scrape weather details" sap:VirtualizedContainerService.HintSize="450,1210" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="False" DisplayName="Type CityName Into Search Field " EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" Text="[&quot;Weather in &quot; + CityName + &quot; in Fahrenheit &quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="False" DisplayName="Type CityName Into Search Field " EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" Text="[&quot;Weather in &quot; + CityName + &quot; in Fahrenheit &quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="724, 538, 443, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='gLFyf' aaname='Search' /&gt;" Guid="4941863f-51f7-4fca-8254-148adc63cc4b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAb8AAAAmCAYAAABUDZVNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACnSURBVHhe7dVBDQAgDAAxpEAy/xaHkOujGnrumwWAEvkBkCM/AHLkB0CO/ADIkR8AOfIDIEd+AOTID4Ac+QGQIz8AcuQHQI78AMiRHwA58gMgR34A5MgPgBz5AZAjPwBy5AdAjvwAyJEfADnyAyBHfgDkyA+AHPkBkCM/AHLkB0CO/ADIkR8AOfIDIEd+AOTID4Ac+QGQIz8AcuQHQI78AMiRHwAxsx9VTEqNrNGORgAAAABJRU5ErkJggg==" InformativeScreenshot="06a9faaf45b310ea8dc74a962bb5a5f1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -150,42 +150,19 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Press &quot;Enter&quot;" sap:VirtualizedContainerService.HintSize="486,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,297" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'SPAN'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Activate_1">
-                    <ui:Activate.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39ba2f81-c9cc-4608-84a5-d36b465e519a" InformativeScreenshot="d79e3a3f1a19ce1e379197d4f7979d20" Selector="&lt;webctrl aria-label='°Fahrenheit' aria-role='button' tag='SPAN' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Activate.Target>
-                  </ui:Activate>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <uix:NGetText DisplayName="Get Temperature" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" TextString="[Temperature]" Version="V3">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Press &quot;Enter&quot;" sap:VirtualizedContainerService.HintSize="388,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NGetText DisplayName="Get Temperature" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" TextString="[Temperature]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/search?q=Weather+in+vik+in+Fahrenheit+&amp;sxsrf=AJOqlzVOWtASkw7Gao0hZox8HDwz82gpsw%3A1679373620696&amp;source=hp&amp;ei=NDUZZO7CKN632roPtcGI4Ak&amp;iflsig=AK50M_UAAAAAZBlDRLqJR1lE8zm47UcRkXQEIiRv4Bu0&amp;ved=0ahUKEwjurOugmuz9AhXem1YBHbUgApwQ4dUDCAg&amp;uact=5&amp;oq=&amp;gs_lcp=Cgdnd3Mtd2l6EANQAFgAYABoAHAAeACAAQCIAQCSAQCYAQA&amp;sclient=gws-wiz" DesignTimeRectangle="308, 352, 38, 60" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-1'" FullSelectorArgument="&lt;webctrl id='wob_tm' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='wob_tm' tag='SPAN' type='' class='wob_t q8U8x' /&gt;" Guid="36e765a4-ea45-4987-a5ac-01e92d2df3e1" InformativeScreenshot="f4d9496411807209e1cafc7c1252a1fb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Weather in vik in Fahrenheit - Google Search' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <ui:LogMessage DisplayName="Log Temperature" sap:VirtualizedContainerService.HintSize="486,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Temperature]" />
-            <uix:NGetText DisplayName="Get Weather Type" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" TextString="[WeatherType]" Version="V3">
+            <ui:LogMessage DisplayName="Log Temperature" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Temperature]" />
+            <uix:NGetText DisplayName="Get Weather Type" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="2e435f8c-7578-41a7-abf8-0f2b4e4957f3" TextString="[WeatherType]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/search?q=Weather+in+cairoin+Farenheit+&amp;sxsrf=AJOqlzUiF9GaeSHsJgjOeOzvttaT0fRk0w%3A1679369814441&amp;source=hp&amp;ei=ViYZZNL3GO6k1e8Ps5WD8Ag&amp;iflsig=AK50M_UAAAAAZBk0ZpMdAZLy7-J_mkroP3oFwbiT5_ys&amp;ved=0ahUKEwjS-u-JjOz9AhVuUvUHHbPKAI4Q4dUDCAg&amp;uact=5&amp;oq=Weather+in+cairon&amp;gs_lcp=Cgdnd3Mtd2l6EAMyDAgAEIAEEA0QRhCAAjIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDToICAAQgAQQsQM6CAguENQCEIAEOgsIABCABBCxAxCDAToFCAAQgAQ6CwguEIAEELEDEIMBOgQIIxAnOgsILhDUAhCxAxCABDoFCC4QgAQ6CwgAEIAEELEDEMkDOg0IABCABBCxAxBGEIACOgcIABCABBAKOg0IABCABBCxAxCDARAKOgoIABCABBCxAxAKOgoIABCABBBGEIACUABYlZABYKyEB2gAcAB4AIABa4gB3AuSAQQxNS4ymAEAoAEB&amp;sclient=gws-wiz" DesignTimeRectangle="708, 401, 182, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Clear with'" FullSelectorArgument="&lt;webctrl id='wob_dc' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='wob_dc' tag='SPAN' type='' class='' /&gt;" Guid="e4421303-da31-4ac2-b5e4-cc37c6239aea" InformativeScreenshot="2d8f008e1ee6a1fa3a00ae626c417599.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Weather in cairo in Fahrenheit - Google Search' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <ui:LogMessage DisplayName="Log Weather Type" sap:VirtualizedContainerService.HintSize="486,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[WeatherType]" />
+            <ui:LogMessage DisplayName="Log Weather Type" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[WeatherType]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -199,10 +176,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Flowchart DisplayName="Flowchart - Analyze the Weather" sap:VirtualizedContainerService.HintSize="582,52" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart DisplayName=" Analyze the Weather" sap:VirtualizedContainerService.HintSize="1108,660" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">510,12.5</av:Point>
           <av:Size x:Key="ShapeSize">60,75</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">540,87.5 540,116.5</av:PointCollection>
@@ -214,10 +191,7 @@
       <Flowchart.StartNode>
         <x:Reference>__ReferenceID6</x:Reference>
       </Flowchart.StartNode>
-      <FlowDecision x:Name="__ReferenceID6" DisplayName="Check if raining" sap:VirtualizedContainerService.HintSize="89,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-        <FlowDecision.Condition>
-          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="WeatherType.ToLower.Contains(&quot;rain&quot;) Or &#xD;&#xA;WeatherType.ToLower.Contains(&quot;showers&quot;) Or &#xD;&#xA;WeatherType.ToLower.Contains(&quot;thunderstorm&quot;)" />
-        </FlowDecision.Condition>
+      <FlowDecision x:Name="__ReferenceID6" Condition="[WeatherType.ToLower.Contains(&quot;rain&quot;) Or WeatherType.ToLower.Contains(&quot;showers&quot;) Or WeatherType.ToLower.Contains(&quot;thunderstorm&quot;)]" DisplayName="Check if raining" sap:VirtualizedContainerService.HintSize="89,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -255,10 +229,7 @@
           </FlowStep>
         </FlowDecision.True>
         <FlowDecision.False>
-          <FlowDecision x:Name="__ReferenceID1" DisplayName="Check if too cold, Temp &lt; 40" sap:VirtualizedContainerService.HintSize="157,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-            <FlowDecision.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Convert.ToInt32(Temperature) &lt;= 40" />
-            </FlowDecision.Condition>
+          <FlowDecision x:Name="__ReferenceID1" Condition="[Convert.ToInt32(Temperature) &lt;= 40]" DisplayName="Check if too cold, Temp &lt; 40" sap:VirtualizedContainerService.HintSize="157,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -292,10 +263,7 @@
               </FlowStep>
             </FlowDecision.True>
             <FlowDecision.False>
-              <FlowDecision x:Name="__ReferenceID3" DisplayName="Check if too hot, temp &gt; 80" sap:VirtualizedContainerService.HintSize="151,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                <FlowDecision.Condition>
-                  <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Convert.ToInt32(Temperature) &gt; 80" />
-                </FlowDecision.Condition>
+              <FlowDecision x:Name="__ReferenceID3" Condition="[Convert.ToInt32(Temperature) &gt; 80]" DisplayName="Check if too hot, temp &gt; 80" sap:VirtualizedContainerService.HintSize="151,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -363,7 +331,7 @@
       <x:Reference>__ReferenceID4</x:Reference>
       <x:Reference>__ReferenceID5</x:Reference>
     </Flowchart>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Clothing Suggestion" sap:VirtualizedContainerService.HintSize="582,85" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The temperature is &quot; + Temperature + &quot; °F. The wether is: &quot;+WeatherType+ &quot;. &quot; + OutfitSuggestion + &quot; &quot; + RainGear]">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Clothing Suggestion" sap:VirtualizedContainerService.HintSize="1108,85" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The temperature is &quot; + Temperature + &quot; °F. The wether is: &quot;+WeatherType+ &quot;. &quot; + OutfitSuggestion + &quot; &quot; + RainGear]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -371,5 +339,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MessageBox>
+    <ui:LogMessage DisplayName="Done Proces Log" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Process Finished.&quot;]" />
   </Sequence>
 </Activity>
